@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Generalt_programmering
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -20,13 +20,13 @@ namespace Generalt_programmering
 
         }
 
-        private static int AddAndMultiply(int c, int a, int b)
+        public static int AddAndMultiply(int c, int a, int b)
         {
             Console.WriteLine(c + a * b);
             return c + a * b;
         }
 
-        private static void CtoF(double tempC)
+        public static void CtoF(double tempC)
         {
             if (tempC <= -271.15)
             {
@@ -44,22 +44,22 @@ namespace Generalt_programmering
             Console.WriteLine(addition(a, b).ToString() + "," + substraction(a, b).ToString() + "," + multiplication(a, b).ToString() + "," + division(a, b).ToString());
         }
 
-        private static double addition(double a, double b)
+        public static double addition(double a, double b)
         {
             return a + b;
         }
 
-        private static double substraction(double a, double b)
+        public static double substraction(double a, double b)
         {
             return a - b;
         }
 
-        private static double multiplication(double a, double b)
+        public static double multiplication(double a, double b)
         {
             return a * b;
         }
 
-        private static double division(double a, double b)
+        public static double division(double a, double b)
         {
             if ((double)a == 0 | (double)b == 0)
             {
@@ -68,20 +68,24 @@ namespace Generalt_programmering
             return a / b;
         }
 
-        private static bool IsResultTheSame(int a, int b)
+        public static bool IsResultTheSame(int a, int b)
         {
             Console.WriteLine(a == b);
             return (a == b);
 
         }
 
-        private static int ModuloOperations(int a, int b, int c)
+        public static int ModuloOperations(int a, int b, int c)
         {
+            if ((double)a == 0 | (double)b == 0)
+            {
+                return a;
+            }
             Console.WriteLine(a % b % c);
             return a % b % c;
         }
 
-        private static double TheCubeOf(double a)
+        public static double TheCubeOf(double a)
         {
             a = a * a * a;
             Console.WriteLine(a);
